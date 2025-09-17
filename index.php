@@ -38,7 +38,7 @@
             <h2 class="text-center mb-5">Featured Exhibits</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="exhibit-card">
+                    <div class="exhibit-card hidden-left">
                         <img src="https://picsum.photos/seed/exhibit1/800/600" alt="Abstract digital sculpture with flowing lights.">
                         <div class="card-body">
                             <h5 class="card-title">Luminous Forms</h5>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="exhibit-card">
+                    <div class="exhibit-card hidden-bottom">
                         <img src="https://picsum.photos/seed/exhibit2/800/600" alt="Interactive holographic display of ancient artifacts.">
                         <div class="card-body">
                             <h5 class="card-title">Holo-Relics</h5>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="exhibit-card">
+                    <div class="exhibit-card hidden-right">
                         <img src="https://picsum.photos/seed/exhibit3/800/600" alt="A virtual reality experience of a surreal landscape.">
                         <div class="card-body">
                             <h5 class="card-title">VR Dreams</h5>
@@ -86,6 +86,51 @@
         <div class="overlay-content">
             <h2>Section 3 Title</h2>
             <p>Description for section 3.</p>
+        </div>
+    </section>
+
+    <section id="tickets" class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Buy Tickets</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="ticket-form-container">
+                        <form>
+                            <div class="mb-3">
+                                <label for="ticket-type" class="form-label">Tariff</label>
+                                <select class="form-select" id="ticket-type" aria-label="Select ticket type">
+                                    <option selected>Choose tariff...</option>
+                                    <option value="adult">Adult</option>
+                                    <option value="child">Child</option>
+                                    <option value="family">Family</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ticket-quantity" class="form-label">Number of tickets</label>
+                                <select class="form-select" id="ticket-quantity" aria-label="Select number of tickets">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="visit-date" class="form-label">Date of visit</label>
+                                <input type="date" class="form-control" id="visit-date">
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Buy Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

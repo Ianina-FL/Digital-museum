@@ -64,8 +64,26 @@ body {
     border: 1px solid #00BFFF;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out, box-shadow 0.3s;
     box-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF;
+    opacity: 0; /* Start hidden */
+}
+
+.exhibit-card.hidden-left {
+    transform: translateX(-100px);
+}
+
+.exhibit-card.hidden-right {
+    transform: translateX(100px);
+}
+
+.exhibit-card.hidden-bottom {
+    transform: translateY(100px);
+}
+
+.exhibit-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
 
 .exhibit-card:hover {
@@ -91,6 +109,11 @@ body {
 .exhibit-card .card-text {
     color: #E0E0E0;
     text-shadow: 0 0 3px #FFFFFF, 0 0 8px #00BFFF;
+}
+
+section h2 {
+    color: #FFFFFF;
+    text-shadow: 0 0 8px #FFFFFF, 0 0 15px #00BFFF, 0 0 20px #00BFFF;
 }
 
 .full-width-section {
@@ -122,4 +145,57 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
+}
+
+#tickets {
+    position: relative;
+    background: url('https://noma.org/wp-content/uploads/2019/04/Screenshot-2019-04-30-10.10.43.png') no-repeat center center/cover;
+}
+
+#tickets::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#tickets .container {
+    position: relative;
+    z-index: 2;
+}
+
+.ticket-form-container {
+    background-color: rgba(16, 16, 32, 0.85);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #00BFFF;
+    box-shadow: 0 0 15px #00BFFF;
+}
+
+.ticket-form-container .form-label {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #00BFFF;
+}
+
+.ticket-form-container .form-control,
+.ticket-form-container .form-select {
+    background-color: #000010;
+    color: #FFFFFF;
+    border: 1px solid #00BFFF;
+}
+
+.ticket-form-container .form-control:focus,
+.ticket-form-container .form-select:focus {
+    background-color: #000010;
+    color: #FFFFFF;
+    border-color: #FF00FF;
+    box-shadow: 0 0 10px #FF00FF;
+}
+
+.ticket-form-container .form-control::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
