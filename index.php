@@ -6,6 +6,8 @@
     <title>Digital Museum</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/custom.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
 </head>
 <body>
 
@@ -39,7 +41,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="exhibit-card hidden-left">
-                        <img src="https://picsum.photos/seed/exhibit1/800/600" alt="Abstract digital sculpture with flowing lights.">
+                        <img src="https://media.istockphoto.com/id/1367089822/vector/blue-glowing-swirl-light-effect-magic-abstract-frame-power-energy-of-circular-element.jpg?s=612x612&w=0&k=20&c=d5kDHchWlUENE1MtqJiiUmCt7SNEYQGlU6y0JvpKAP0=" alt="Abstract digital sculpture with flowing lights.">
                         <div class="card-body">
                             <h5 class="card-title">Luminous Forms</h5>
                             <p class="card-text">A dance of light and shadow, sculpted in the digital realm.</p>
@@ -48,16 +50,16 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="exhibit-card hidden-bottom">
-                        <img src="https://picsum.photos/seed/exhibit2/800/600" alt="Interactive holographic display of ancient artifacts.">
+                        <img src="https://fydn.imgix.net/m/x1000/1f3fcb96-543b-4e38-929d-ad1e13a46c61.jpg?q=75&auto=format,compress&w=480&dpr=1" alt="Interactive holographic display of ancient artifacts." class="holo-relics-img">
                         <div class="card-body">
-                            <h5 class="card-title">Holo-Relics</h5>
+                            <h5 class="card-title">Holo relics</h5>
                             <p class="card-text">Ancient history brought to life through interactive holography.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="exhibit-card hidden-right">
-                        <img src="https://picsum.photos/seed/exhibit3/800/600" alt="A virtual reality experience of a surreal landscape.">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E12AQHegyw27WmVOA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1669022700627?e=2147483647&v=beta&t=sCWZCe6juhtnPhHwKvSshY07hUoloLMaSj_I6XxoeqE" alt="A virtual reality experience of a surreal landscape.">
                         <div class="card-body">
                             <h5 class="card-title">VR Dreams</h5>
                             <p class="card-text">Step into another reality and explore breathtaking virtual worlds.</p>
@@ -141,6 +143,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

@@ -181,21 +181,183 @@ section h2 {
     text-shadow: 0 0 5px #FFFFFF, 0 0 10px #00BFFF;
 }
 
-.ticket-form-container .form-control,
-.ticket-form-container .form-select {
-    background-color: #000010;
-    color: #FFFFFF;
-    border: 1px solid #00BFFF;
+/* Date Picker */
+.ticket-form-container .form-control[type="date"] {
+    color-scheme: dark;
+    position: relative;
 }
 
-.ticket-form-container .form-control:focus,
-.ticket-form-container .form-select:focus {
-    background-color: #000010;
-    color: #FFFFFF;
-    border-color: #FF00FF;
-    box-shadow: 0 0 10px #FF00FF;
+/* Calendar Icon Styling */
+.ticket-form-container .form-control[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 1;
+    filter: invert(80%) sepia(100%) saturate(300%) hue-rotate(280deg) drop-shadow(0 0 6px #ff00ff); /* Glowing pink icon */
+    transition: filter 0.3s ease;
 }
 
-.ticket-form-container .form-control::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+.ticket-form-container .form-control[type="date"]::-webkit-calendar-picker-indicator:hover {
+    filter: invert(90%) sepia(100%) saturate(500%) hue-rotate(180deg) drop-shadow(0 0 10px #00BFFF); /* Glowing cyan on hover */
+}
+
+/* --- Flatpickr Neon Theme --- */
+
+.flatpickr-calendar {
+    background: #0a001f;
+    border: 1px solid #ff00ff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #ff00ff;
+    width: 300px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.flatpickr-months .flatpickr-month {
+    color: #fff;
+    fill: #fff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    color: #ff00ff;
+    fill: #ff00ff;
+    transition: all 0.3s ease;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+    color: #00BFFF;
+    fill: #00BFFF;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    background: #0a001f;
+    border: 1px solid #ff00ff;
+    color: #fff;
+}
+
+.flatpickr-current-month .numInput {
+    background: transparent;
+    color: #fff;
+    border: none;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.flatpickr-weekdays {
+    background: #101020;
+}
+
+span.flatpickr-weekday {
+    color: #ff00ff;
+    font-weight: bold;
+    text-shadow: 0 0 3px #ff00ff;
+}
+
+.flatpickr-day {
+    color: #ccc;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.flatpickr-day:hover {
+    background: #101020;
+    border-color: #00BFFF;
+    color: #00BFFF;
+}
+
+.flatpickr-day.today {
+    border-color: #ff00ff;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: #ff00ff;
+    border-color: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.flatpickr-day.disabled,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    color: #444;
+}
+
+.holo-relics-img {
+  object-position: top;
+}
+
+/* --- Choices.js Neon Theme --- */
+
+.choices {
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.choices__inner {
+  background-color: #0a001f;
+  color: #BC13FE; /* MODIFIED: Neon Purple */
+  border: 1px solid #ff00ff;
+  box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
+              inset 0 0 5px rgba(255, 0, 255, 0.5);
+  border-radius: 8px;
+  padding: .375rem .75rem;
+  transition: all 0.3s ease;
+  min-height: auto;
+}
+
+.choices.is-open .choices__inner {
+  border-color: #00BFFF;
+  box-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 40px #00BFFF,
+              inset 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+.choices__list--dropdown {
+  background-color: #0a001f;
+  border: 1px solid #00BFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00BFFF;
+  margin-top: 5px;
+  color: #39FF14; /* MODIFIED: Neon Green */
+}
+
+.choices__item {
+  padding: 10px;
+}
+
+.choices__item--selectable.is-highlighted {
+  background-color: #BC13FE; /* MODIFIED: Neon Purple */
+  color: #000; /* MODIFIED: Black */
+}
+
+.choices__list [role=option] {
+    color: #39FF14; /* MODIFIED: Neon Green */
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: #BC13FE; /* MODIFIED: Neon Purple */
+    color: #000; /* MODIFIED: Black */
+}
+
+.choices__pointer {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ff00ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 12px;
+    height: 100%;
+    width: 20px;
+    margin-top: 0;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.choices.is-open .choices__pointer {
+    transform: rotate(-180deg);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2300BFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.choices__item--choice {
+    padding: 0.5rem 1rem;
 }
