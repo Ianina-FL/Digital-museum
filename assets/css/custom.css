@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-color: #000010;
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(16, 16, 32, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+    color: #00BFFF !important;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://preview.redd.it/1920x1080-futuristic-digital-art-of-men-and-city-at-night-v0-vni5e3auiyw91.jpg?auto=webp&s=6393927bf49cec89bf66e020a914be54c8edc7c3') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00BFFF, #FF00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00BFFF, #FF00FF);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.exhibit-card {
+    background-color: #101020;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF;
+}
+
+.exhibit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px #FF00FF, 0 0 25px #FF00FF, 0 0 35px #FF00FF;
+}
+
+.exhibit-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.exhibit-card .card-body {
+    padding: 1.5rem;
+}
+
+.exhibit-card .card-title {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF;
+}
+
+.exhibit-card .card-text {
+    color: #E0E0E0;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 8px #00BFFF;
+}
+
+.full-width-section {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.full-width-section .overlay-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.full-width-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
