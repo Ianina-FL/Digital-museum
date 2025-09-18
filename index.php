@@ -18,7 +18,7 @@
         <i class="fas fa-play"></i>
     </div>
     <audio id="background-music" loop>
-        <source src="https://archive.org/download/DIADJ-002/DIADJ-002-01.mp3" type="audio/mpeg">
+        <source src="https://www.fesliyanstudios.com/download-link.php?src=i&id=2" type="audio/mpeg">
     </audio>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -149,7 +149,7 @@
     <footer class="py-4 text-center text-muted">
         <div class="container">
             <p>&copy; 2025 Digital Museum. All rights reserved.</p>
-            <p style="font-size: 0.8rem; color: #888;">Music by <a href="https://archive.org/details/DIADJ-002" target="_blank" rel="noopener noreferrer">DIADJ on Internet Archive</a></p>
+            <p style="font-size: 0.8rem; color: #888;">Music by <a href="https://www.fesliyanstudios.com" target="_blank" rel="noopener noreferrer">David Fesliyan (FesliyanStudios.com)</a></p>
         </div>
     </footer>
 
