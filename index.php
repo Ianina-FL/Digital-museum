@@ -8,11 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/custom.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
 </head>
 <body>
+    <div id="music-toggle">
+        <i class="fas fa-play"></i>
+    </div>
+    <audio id="background-music" loop>
+        <source src="https://archive.org/download/DIADJ-002/DIADJ-002-01.mp3" type="audio/mpeg">
+    </audio>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -120,7 +127,7 @@
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
-                                    <option value="8">8</option>
+                                    <option value="8">8</.option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
@@ -142,6 +149,7 @@
     <footer class="py-4 text-center text-muted">
         <div class="container">
             <p>&copy; 2025 Digital Museum. All rights reserved.</p>
+            <p style="font-size: 0.8rem; color: #888;">Music by <a href="https://archive.org/details/DIADJ-002" target="_blank" rel="noopener noreferrer">DIADJ on Internet Archive</a></p>
         </div>
     </footer>
 
@@ -149,5 +157,28 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-music');
+            const toggleButton = document.getElementById('music-toggle');
+            const icon = toggleButton.querySelector('i');
+
+            if (audio && toggleButton && icon) {
+                audio.volume = 0.5;
+
+                toggleButton.addEventListener('click', () => {
+                    if (audio.paused) {
+                        audio.play().catch(error => console.error("Audio play failed:", error));
+                        icon.classList.remove('fa-play');
+                        icon.classList.add('fa-pause');
+                    } else {
+                        audio.pause();
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
